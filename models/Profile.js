@@ -47,7 +47,6 @@ const ProfileSchema = new Schema({
       },
       location: {
         type: String,
-        required: true,
       },
       from: {
         type: Date,
@@ -118,5 +117,5 @@ const ProfileSchema = new Schema({
   },
 });
 
-Profile = mongoose.model("profile", ProfileSchema);
+Profile = mongoose.model("profiles", ProfileSchema);
 module.exports = Profile;
