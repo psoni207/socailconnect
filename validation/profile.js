@@ -9,17 +9,17 @@ module.exports = function validateProfileInput(data) {
   data.skills = !isEmpty(data.skills) ? data.skills : "";
 
   if (Validator.isEmpty(data.handle)) {
-    errors.handle = "Profile handle field is requrired";
+    errors.handle = "Profile handle field is required";
   } else if (!Validator.isLength(data.handle, { min: 2, max: 40 })) {
     errors.handle = "Handle needs to be between 2 and 40 characters";
   }
 
   if (Validator.isEmpty(data.status)) {
-    errors.status = "Status field is requrired";
+    errors.status = "Status field is required";
   }
 
   if (Validator.isEmpty(data.skills)) {
-    errors.skills = "Skills field is requrired";
+    errors.skills = "Skills field is required";
   }
 
   if (!isEmpty(data.website)) {
